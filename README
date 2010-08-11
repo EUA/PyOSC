@@ -1,0 +1,28 @@
+pyOSC v0.1
+Erdem U. Altinyurt 2010(c) GPLv2  license
+
+Frirstly you needed to install this libraries:
+1. Python > v2.6 (www.wxpython.org) but not Python 3
+2. Python's wx library ( www.wxpython.org )
+3. pyusb 1 alpha ( pyusb.sourceforge.net )
+4. libusb1 (it's installed default on most distros) 
+
+Than you needed to give read/write access to your USB device.
+It's on 4th bus and 4.th device my current setup (as 0461:0020 Primax Electronics, Ltd ).
+Adjust numbers after "sudo chmod o+wr /dev/bus/usb/..." ,depending on your setup, or run the script as a root!
+
+dummy@user:/home/dummy/pyOSC> lsusb
+Bus 003 Device 004: ID 09da:8090 A4 Tech Co., Ltd 
+Bus 003 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 003 Device 003: ID 067b:2303 Prolific Technology, Inc. PL2303 Serial Port
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 004 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 004 Device 004: ID 0461:0020 Primax Electronics, Ltd 
+Bus 005 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 006 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+Bus 007 Device 001: ID 1d6b:0001 Linux Foundation 1.1 root hub
+
+dummy@user:/home/dummy/pyOSC> sudo chmod o+wr /dev/bus/usb/004/004
+
+Script could run under macOSX and Windows too. But on windows, I think there is no libusb1
