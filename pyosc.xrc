@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="pyosc">
+		<style>wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL</style>
+		<bg>#f0f0f0</bg>
+		<title>PIC18F2550 USB HID Oscilloscope - www.semifluid.com</title>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticTextUSB">
+											<label>USB Device:</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="txt_USBStatus">
+											<label>Disconnected</label>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxGridSizer">
+									<rows>2</rows>
+									<cols>2</cols>
+									<vgap>0</vgap>
+									<hgap>0</hgap>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="txt_period">
+											<label>.000ms</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="txt_voltage">
+											<label>0.00V</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxEXPAND|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxScrollBar" name="scroll_H1">
+											<style>wxSB_HORIZONTAL</style>
+											<value>0</value>
+											<thumbsize>1</thumbsize>
+											<range>512</range>
+											<pagesize>1</pagesize>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxEXPAND|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxScrollBar" name="scroll_V1">
+											<style>wxSB_HORIZONTAL</style>
+											<value>0</value>
+											<thumbsize>1</thumbsize>
+											<range>256</range>
+											<pagesize>1</pagesize>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxEXPAND|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxScrollBar" name="scroll_H2">
+											<style>wxSB_HORIZONTAL</style>
+											<value>0</value>
+											<thumbsize>1</thumbsize>
+											<range>512</range>
+											<pagesize>1</pagesize>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxEXPAND|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxScrollBar" name="scroll_V2">
+											<style>wxSB_HORIZONTAL</style>
+											<value>0</value>
+											<thumbsize>1</thumbsize>
+											<range>256</range>
+											<pagesize>1</pagesize>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+										<border>5</border>
+										<object class="wxButton" name="btn_getdata_asap">
+											<label>Get ADC Data</label>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText9">
+											<label>as fast as possible</label>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+										<border>5</border>
+										<object class="wxButton" name="btn_getdata">
+											<label>Get ADC Data</label>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText8">
+											<label>with a period of</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxALIGN_CENTER_HORIZONTAL|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="txt_latency">
+											<size>40,-1</size>
+											<value>1</value>
+											<maxlength>0</maxlength>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxEXPAND</flag>
+										<border>5</border>
+										<object class="wxBoxSizer">
+											<orient>wxVERTICAL</orient>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag></flag>
+												<border>5</border>
+												<object class="wxRadioButton" name="radio_latency_us">
+													<label>us</label>
+													<value>0</value>
+												</object>
+											</object>
+											<object class="sizeritem">
+												<option>0</option>
+												<flag></flag>
+												<border>5</border>
+												<object class="wxRadioButton" name="radio_latency_ms">
+													<label>ms</label>
+													<value>1</value>
+												</object>
+											</object>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxGridSizer">
+									<rows>2</rows>
+									<cols>2</cols>
+									<vgap>0</vgap>
+									<hgap>0</hgap>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxLEFT</flag>
+										<border>5</border>
+										<object class="wxCheckBox" name="chk_contunious">
+											<label>Contunious Read</label>
+											<checked>0</checked>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag></flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText14">
+											<label></label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxLEFT</flag>
+										<border>5</border>
+										<object class="wxCheckBox" name="chk_useCRC">
+											<label>Use CRC</label>
+											<checked>1</checked>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_RIGHT</flag>
+										<border>5</border>
+										<object class="wxCheckBox" name="chk_pause">
+											<label>Pause Redraw</label>
+											<checked>0</checked>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>5</border>
+				<object class="wxPanel" name="oscDC">
+					<style>wxTAB_TRAVERSAL</style>
+					<size>512,300</size>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxTextCtrl" name="txt_debug">
+					<style>wxTE_MULTILINE</style>
+					<value></value>
+					<maxlength>0</maxlength>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxHORIZONTAL</orient>
+					<label>Debug</label>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag></flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag></flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText7">
+											<label>Send Data:</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="txt_SendData0">
+											<size>33,-1</size>
+											<value>10</value>
+											<maxlength>3</maxlength>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="txt_SendData1">
+											<size>33,-1</size>
+											<value>255</value>
+											<maxlength>3</maxlength>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="txt_SendData2">
+											<size>33,-1</size>
+											<value>255</value>
+											<maxlength>3</maxlength>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="txt_SendData3">
+											<size>33,-1</size>
+											<value>255</value>
+											<maxlength>3</maxlength>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="txt_SendData4">
+											<size>33,-1</size>
+											<value>255</value>
+											<maxlength>3</maxlength>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="txt_SendData5">
+											<size>33,-1</size>
+											<value>255</value>
+											<maxlength>3</maxlength>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="txt_SendData6">
+											<size>33,-1</size>
+											<value>255</value>
+											<maxlength>3</maxlength>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="txt_SendData7">
+											<size>33,-1</size>
+											<value>255</value>
+											<maxlength>3</maxlength>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText81">
+											<label>Read Data:</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="txt_ReadData">
+											<label></label>
+										</object>
+									</object>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxBoxSizer">
+									<orient>wxHORIZONTAL</orient>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText101">
+											<label>Sample Size:</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxTextCtrl" name="m_textCtrl26">
+											<enabled>0</enabled>
+											<value>512</value>
+											<maxlength>0</maxlength>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxRIGHT</flag>
+										<border>5</border>
+										<object class="wxCheckBox" name="m_checkBox4">
+											<enabled>0</enabled>
+											<label>Show DFT</label>
+											<checked>0</checked>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL|wxLEFT</flag>
+										<border>5</border>
+										<object class="wxStaticText" name="m_staticText15">
+											<label>DFT N:</label>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<object class="wxChoice" name="choice_DFT">
+											<selection>0</selection>
+											<content>
+												<item>512</item>
+												<item>256</item>
+												<item>128</item>
+												<item>64</item>
+												<item>32</item>
+												<item>16</item>
+												<item>8</item>
+											</content>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_RIGHT</flag>
+						<border>5</border>
+						<object class="wxBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_RIGHT|wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="btn_readwrite">
+									<label>Read/Write</label>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="btn_getramdata">
+									<label>Get RAM Data</label>
+									<default>0</default>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>
